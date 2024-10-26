@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=5.0'>
+    <title>User Profile Form</title>
+</head>
+<body>
+    <h1>Submit Your Profile</h1>
+    <form action = '/' method="post">
+        <label for ='name'>Name:</label>
+        <input type = 'text' id="name" name="name" required<br><br>
+        <label for ='city'>City:</label>
+        <select id = 'city' name="city_id" required>
+            {% for city in cities %}
+                <option value = "{{city.id}}">{{city.city}}</option>
+            {% endfor %}
+        </select><br><br>
+        <button type = 'submit'>Submit</button>
+    </form>
+</body>
+</html>
+
